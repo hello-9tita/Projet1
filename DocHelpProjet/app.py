@@ -5,7 +5,7 @@ import pyodbc
 # Initialize Flask app
 app = Flask(__name__)
 
-# Configure Azure SQL Database
+# Configure Azure SQL Database (environment variable for security)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://wissal:DocHelp_server@dochelp-server.database.windows.net/DBdoc?driver=ODBC+Driver+17+for+SQL+Server'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
